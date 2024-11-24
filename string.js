@@ -14,9 +14,14 @@ const calc = "2+2"
 //primitive
 const calc2=new String("2+2")
 //object string
-//console.log(calc.eval());
-// print the method is not valid
-console.log(calc2.valueOf());
-console.log(calc.valueOf())
-console.log(`this is ${calc}`);
 
+console.log(calc2.valueOf())
+console.log(calc.valueOf())
+//  return "2+2" //they both return same output even they are different string
+
+console.log(eval(calc2))//return 4 , it return this because it is a object type string 
+// to make calculate the primitive string  we do this 
+
+console.log(eval(calc.valueOf()))//return 4
+
+console.log(`this is ${calc}`);// this is good way to write or call the value of variable by using the `${}` 
