@@ -32,8 +32,13 @@ let arr2 = [7,8,9,10];
  console.log(arr1); // return 100,1,2,3,4,5,
 
 
- 
- 
+ let a = "noone"
+  let b=Array.from(a)// it make the dtring to array form by breaking it 
+  console.log(b);
+  // another way 
+  let c ="fuck1 2"
+  let d = Array.of(c);// put the value in array form of string
+  console.log(d);
  
 
  
