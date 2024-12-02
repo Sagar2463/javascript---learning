@@ -37,15 +37,15 @@ function localScope(){
     // let is used to declare a variable that can be reassigned
     // const is used to declare a variable that cannot be reassigned
 
-    let name = "John";
-    name = "Jane";
-    console.log(name);
+    // let name = "John";
+    // name = "Jane";
+    // console.log(name);
     // ++++++++++++++++++++ let and const in javascript ++++++++++++++++
     // ++++++++++++++++++++ var in javascript ++++++++++++++++
     // var is used to declare a variable that can be reassigned
     // var is function scoped not block scoped
     // var is used in older versions of javascript
     
-    var name = "John";
-    name = "Jane";
-    console.log(name);
+    // var name = "John";
+    // name = "Jane";
+    // console.log(name);
