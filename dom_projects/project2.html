@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> BMI CALCULATOR</title>
+
+</head>
+<body>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+    
+    <form>
+        <p>height in cm <input id ="height"placeholder="enter the value"></p>
+        <p>weight in kg <input id="weight"placeholder="enter the value"></p>
+        <button id="submitButton">calculate</button>
+    </form>
+<div id="result"></div>
+<script>
+   const height = document.getElementById("height")
+   const weight = document.getElementById("weight")
+   const submitButton = document.getElementById("submitButton")
+   const result = document.getElementById("result")
+   submitButton.addEventListener("click",function(e){
+    e.preventDefault()
+    const heightValue = parseInt(height.value)
+    const weightValue = parseInt(weight.value)
+    if(heightValue<=0 || weightValue<=0 || isNaN(heightValue) || isNaN(weightValue)){
+        result.textContent = "invalid input"
+    }else{
+    var heightInMeters = heightValue / 100;
+    var bmi = parseInt(weightValue / (heightInMeters * heightInMeters))
+    console.log(bmi);
+    
+    result.innerHTML=`your bmi is ${bmi}`
+
+    }
+    
+   })
+
+
+
+
+
+</script>
+
+</body>
+</html>
