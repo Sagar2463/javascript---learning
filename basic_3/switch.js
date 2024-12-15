@@ -19,7 +19,7 @@ console.log(10 ?? 20);// will print 10
 console.log(10 ?? 20 ?? 30);// will print 10
 const add =function(num1,num2){
     console.log(num1 + num2 );
-     num1+num2;
+    
 }
 console.log(undefined ?? `${add(2,3)}`);// print 5
 // it help to give response even if some wrong or empty response come 

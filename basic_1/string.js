@@ -4,7 +4,7 @@ const myName ="sagar_singh"
 const Myname = new String("sunil_singh");
 // object string 
 console.log(Myname.length);//gives the length of string
-console.log(myName.replace("_"," "));
+console.log(myName.replace("_"," "));// the value u want to replace 1st and to with 2nd 
 console.log(Myname.slice(0,7));
 console.log(Myname.indexOf("u"));
 
@@ -19,7 +19,7 @@ console.log(calc2.valueOf())
 console.log(calc.valueOf())
 //  return "2+2" //they both return same output even they are different string
 
-console.log(eval(calc2))//return 4 , it return this because it is a object type string 
+console.log(eval(calc2.valueOf()))//return 4 , it return this because it is a object type string 
 // to make calculate the primitive string  we do this 
 
 console.log(eval(calc.valueOf()))//return 4

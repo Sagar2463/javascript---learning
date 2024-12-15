@@ -14,3 +14,5 @@ add2(2,3);
 ((num1 ,num2)=>{log(num1 + num2)})(2,3);
 // we can invoked the iifw function with another way of creating function 
 (function(number1,number2){log(number1-number2)})(3,1);
+
+((a,b)=>{log(a+b)})(2,3)

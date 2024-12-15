@@ -16,7 +16,7 @@ const name ="noone bgmi"
 for (const value of name) {
     console.log(`${value}`)
 }
-const map= new Map();// mao is a type of object which have all unique value no copies 
+const map= new Map();// map is a type of object which have all unique value no copies 
 map.set("name","mark");
 map.set("age",25);
 map.set("city","delhi");

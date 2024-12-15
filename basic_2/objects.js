@@ -8,7 +8,7 @@ obj1.rank=1;
 //console.log(obj1);
 const obj2 ={}// another way to make an object 
 obj2.name="noone";
-// obj2.age=20;
+ obj2.age=20;
 
 // console.log(obj1['age']);// we can use this symbol to acces element in object
 const obj3 = Object.assign({},obj1,obj2);// this is a way to copy object

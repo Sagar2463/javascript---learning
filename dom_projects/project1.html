@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>color changer buttons</title>
+    </head>
+    <body id="body">
+<style>
+#red{
+    background-color: red;
+    height: 20px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items :center;
+}
+#blue{
+   background-color: blue;
+    height: 20px;
+    width: 40px;
+    border-radius: 5px; b
+}
+#green{
+    background-color: green;
+    height: 20px;
+    width: 40px;
+    border-radius: 5px;
+
+}
+#black{
+    background-color: #212121;
+    height: 20px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+
+</style>
+<div id="red">  </div>
+<div id="blue"> </div>
+<div id="green"> </div>
+<div id="black"> </div>
+
+<script>
+const red= document.querySelector('#red')
+const blue= document.querySelector('#blue')
+const green= document.querySelector('#green')
+const black= document.querySelector('#black')
+red.addEventListener('click',(e)=>{
+    document.body.style.backgroundColor = 'red'
+    })
+ blue.addEventListener('click',(e)=>{
+        document.body.style.backgroundColor = 'blue'
+})
+green.addEventListener('click',(e)=>{
+    document.body.style.backgroundColor = 'green'
+
+    })
+ black.addEventListener('click',(e)=>{
+        document.body.style.backgroundColor = '#212121'
+        })
+        
+
+</script>
+    
+</body>
+</html>

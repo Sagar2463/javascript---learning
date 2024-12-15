@@ -33,7 +33,7 @@ let arr2 = [7,8,9,10];
 
 
  let a = "noone"
-  let b=Array.from(a)// it make the dtring to array form by breaking it 
+  let b=Array.from(a)// it make the string to array form by breaking it 
   console.log(b);
   // another way 
   let c ="fuck1 2"

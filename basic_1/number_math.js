@@ -31,8 +31,23 @@ const randomnum = ()=>{
 
 
 // +++++++++++ DATE +++++++++
-console.log(new Date(Date.now()).toLocaleString());
+// console.log(new Date(Date.now()).toLocaleString());
 
+
+
+
+
+
+
+
+
+
+
+
+const newMaxlimit = 40
+const newMinlimit = 30
+
+console.log(Math.round((Math.random()* (newMaxlimit-newMinlimit) + 1)+ newMinlimit))
 
 
 

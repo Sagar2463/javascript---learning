@@ -19,6 +19,6 @@ log(user.status())
 log(this)// if we use this in a global scope it print a empty object but in browsers console it shows a window object
 // can we use this inside a function scopes
 const add =function(){
-    log(this)// this will print node env global object object
+    log(this)// this will print node env global object
 }
 add()// 
