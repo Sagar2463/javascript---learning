@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        digital clock
+    </title>
+    
+</head>
+<body>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        #clock{
+            font-size: 25px;
+            height: 30px;
+            width: 130px;
+            background-color: #212121;
+            color: #f2f2f2;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: center;
+        }
+        #clock:hover{
+            background-color: #333;
+            cursor: pointer;
+        }
+        
+    </style>
+<p>your current time is </p>
+<div id ="clock"> CLICK ME </div>
+<script>
+    function startTime() {
+    const time = new Date().toLocaleTimeString()
+    document.getElementById("clock").innerHTML = time;
+}
+    document.getElementById("clock").addEventListener('click',(e)=>{
+        e.preventDefault()
+        setInterval(startTime,1000)
+    
+    })
+    
+</script>
+
+</body>
+</html>
