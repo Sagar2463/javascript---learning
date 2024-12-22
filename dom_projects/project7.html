@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll with Random Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        #container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1, p {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Get Your Random Avatars</h1>
+        <p>Click the button below to generate random avatars!</p>
+        <button id="startButton">GET IMAGES</button>
+    </div>
+
+    <script>
+        const container = document.querySelector("#container");
+        const imageapi = "https://robohash.org/"; // API
+        const startButton = document.querySelector("#startButton");
+
+        const randomimage = (size = 40) => {
+            for (let i = 0; i < size; i++) {
+                const img = document.createElement("img");
+                img.src = `${imageapi}${Math.floor(Math.random() * 10000)}?set=set4`; // Generate random avatars; set=set4 is for type of avatar
+                container.appendChild(img);
+            }
+        };
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+                randomimage();
+            }
+        });
+
+        startButton.addEventListener("click", () => {
+            randomimage(); 
+            startButton.style.display = "none";
+            document.querySelector("h1").style.display = "none";
+            document.querySelector("p").style.display = "none";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>random body color</title>
+    </head>
+    <body>
+        <h1>Random Body Color</h1>
+        <button id="btn">Click Me</button>
+        <button id="reset">Reset</button>
+        <script>
+            const start = document.querySelector("#btn");
+            const reset = document.querySelector("#reset");
+            const body = document.querySelector("body");
+        
+            // Function to generate a random color
+            const randomcolor = () => {
+                let color = "#";
+                for (let i = 0; i < 6; i++) {
+                    let num = Math.floor(Math.random() * 16); // Random number between 0-15
+                    color += num.toString(16); // Convert to hex
+                }
+                return color;
+            };
+        
+            // Function to change the body color
+            function colorchanger() {
+                body.style.backgroundColor = randomcolor();
+            }
+        
+            let intervalId; // To store the interval ID
+        
+            // Start changing colors every second
+            start.addEventListener("click", () => {
+                intervalId = setInterval(colorchanger, 1000);
+            });
+        
+            // Stop the color change and reset the background color
+            reset.addEventListener("click", () => {
+                clearInterval(intervalId);
+                body.style.backgroundColor = "white"; // Reset to default color
+            });
+        </script>
+        
+       
+
+
+
+
+
+
+    </body>
+</html>
