@@ -11,8 +11,8 @@ console.log(newscore);*/
 
 let isLogin = " sagar"
 let isLoginNumber = Boolean(isLogin)
-/*console.log(typeof isLoginNumber);
-console.log(isLoginNumber);*/
+console.log(typeof isLoginNumber);
+console.log(isLoginNumber);
 
 // 36 => true
 //"" => false

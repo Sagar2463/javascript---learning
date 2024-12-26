@@ -15,12 +15,12 @@ const demoData = {
 };
 //using for in loop on a object
  for( const key in demoData){
-    //log(`the user is ${key} and the name is ${demoData[key].name} and his age is ${demoData[key].age}`)
+    log(`the user is ${key} and the name is ${demoData[key].name} and his age is ${demoData[key].age}`)
  }
  // using for in loop in array
  const demoArray = [1, 2, 3, 4, 5,]
  for(const key in demoArray){
-   // log(`at ${key}the number is ${demoArray[key]}`)// the difference in using it from for of is that we have the index and we can get the value using that index
+    log(`at ${key}the number is ${demoArray[key]}`)// the difference in using it from for of is that we have the index and we can get the value using that index
 
  }
  const books = [

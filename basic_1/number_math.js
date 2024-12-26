@@ -7,8 +7,8 @@ const num2 = new Number(234.3445)
 // console.log(typeof(num1));// return number
 
 const score = 234.89;
-// console.log(score.toPrecision(),score.toString(),score.toFixed(1));// toFixed return the value after the point to only 1 234.8
-// console.log(num2.toPrecision());
+ console.log(score.toPrecision(),score.toString(),score.toFixed(1));// toFixed return the value after the point to only 1 234.8
+console.log(num2.toPrecision());
 
 
 // ++++++++++++++++ math ++++++++++++++

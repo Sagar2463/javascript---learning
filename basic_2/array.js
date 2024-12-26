@@ -2,7 +2,7 @@ const arr1 = new Array(1,2,3,4,5,6,);
 let arr2 = [7,8,9,10];
 
  console.log(arr1.includes(3));// returns true 
- console.log(arr1.join()); // return strng value 1,2,3,4,5,6,
+ console.log(typeof(arr1.join())); // return strng value 1,2,3,4,5,6,
   // concat functon 
   let arr3 = arr1.concat(arr2);
   console.log(arr3);// return 1,2,3,4,5,6,7,8,9,10
