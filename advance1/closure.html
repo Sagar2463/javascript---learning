@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>closure</title> 
+    </head>
+    <body>
+        <button id ="yellow">yellow</button>
+        <button id ="pink">pink</button>
+
+    </body>
+    <script>
+// lets give a simle color function to the buttons
+document.getElementById("yellow").addEventListener("click", function(){
+    console.log("yellow button clicked");
+    document.body.style.backgroundColor = "yellow";
+    });
+/*document.getElementById("pink").addEventListener("click", function(){
+        console.log("pink button clicked");
+        document.body.style.backgroundColor = "pink";
+    });*/
+// but what if we want to create 100 buttons so doing this for all the butons is not right,so lets use closure
+
+function colorbutton(color) {
+    return function() {
+        console.log(color + " button clicked");
+        document.body.style.backgroundColor = `${color}`
+        }}
+document.getElementById("pink").addEventListener("click",colorbutton("pink"))
+// this is a good way and solution to real world issue using closure- concept and lexical scoping in js
+
+
+
+
+
+    </script>
+</html>
